@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Impostor Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="client.js"></script>
+</head>
+<body>
+
+  <!-- PAGINA 1: NUME -->
+  <div id="name-page" class="page active">
+    <h1>Alege un nume</h1>
+    <input type="text" id="name-input" placeholder="Introdu numele tău">
+    <button id="name-button">Confirmă</button>
+  </div>
+
+  <!-- PAGINA 2: CATEGORIE -->
+  <div id="category-page" class="page">
+    <h2>Alege o categorie</h2>
+    <div id="category-list"></div>
+    <button id="ready-button" class="hidden">Sunt gata</button>
+  </div>
+
+  <!-- PAGINA 3: JOC -->
+  <div id="game-page" class="page">
+    <h2>Categorie: <span id="category-name"></span></h2>
+    <h3>Cuvântul tău: <span id="player-word"></span></h3>
+
+    <div id="chat-box"></div>
+
+    <input type="text" id="chat-input" placeholder="Scrie un mesaj...">
+    <button id="chat-send">Trimite</button>
+
+    <h3>Votează impostorul:</h3>
+    <div id="vote-buttons"></div>
+
+    <button id="reset-button" class="hidden">Reset Joc</button>
+  </div>
+
+</body>
+</html>
